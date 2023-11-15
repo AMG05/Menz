@@ -1,0 +1,12 @@
+.banner {
+    background-color: #ffffff;
+    padding: calc(var(--baseline)*1.5)0;
+
+    @media(min-width: 1024px) {
+        padding: calc(var(--baseline)*2)0;
+    }
+}
+
+.banner--light{
+    background-color: var(--brand-color-light-grey);
+}

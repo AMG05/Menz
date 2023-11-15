@@ -1,0 +1,41 @@
+.block {
+    margin-top: calc(var(--baseline)*2);
+    @media(min-width: map-get($mq-breakpoints,  md)) {
+        margin-top: calc(var(--baseline)*4);
+    }
+ }
+
+.block--bg{
+    padding-bottom:calc(var(--baseline)*2);
+    padding-top:calc(var(--baseline));
+    @media(min-width: map-get($mq-breakpoints,  md)) {
+        padding-bottom:calc(var(--baseline)*4);
+        padding-top:calc(var(--baseline));
+    }
+}
+
+.block--bg + .block--bg{
+    margin:0;
+}
+
+.block-list{
+    > :first-child {
+        margin-top:0;
+        
+    }
+    > :last-child{
+        margin-bottom: calc(var(--baseline)*2);
+        @media(min-width: map-get($mq-breakpoints,  md)) {
+            margin-bottom: calc(var(--baseline)*4);
+        }
+        &.block--bg{
+            margin-bottom:0;
+        }
+    }
+}
+
+.block-first {
+    padding-top:0;
+    padding-bottom: calc(var(--baseline)/2);
+    
+}

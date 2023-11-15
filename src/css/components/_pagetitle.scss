@@ -1,0 +1,21 @@
+.title-page__container{
+    background-color: #ffffff;
+    
+}
+
+
+.title {
+    @include plus-4;
+    font-weight: 600;
+    color: var(--brand-color);
+    padding-bottom: calc(var(--baseline)/2);
+    
+    
+}
+
+.title__body{
+    color: var(--brand-color);
+    font-family: "roboto";
+    font-size: var(--font-size-plus-1);
+    font-weight: 200;
+}

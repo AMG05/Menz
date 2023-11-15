@@ -1,0 +1,20 @@
+.main {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    // height: 100vh;
+    background-color: var(--brand-color-light-grey);
+}
+
+.v-space{
+    @include v-space;
+}
+
+.container{
+    background-color: var(--brand-color-light-grey);
+    padding-top:calc(var(--baseline)*3);
+    width:100%;
+    @media(min-width: map-get($mq-breakpoints,  md)) {
+        padding-top:var(--v-space);
+    }
+}

@@ -1,0 +1,43 @@
+.sec-nav{
+    border-bottom: 1px solid var(--brand-color-dark-grey);
+    background-color: #FFFFFF;
+}
+
+.secondary-navigation {
+    // margin-bottom: calc(var(--baseline)/2);
+    // margin-top: calc(var(--baseline)/2);
+    top: 0;
+    z-index: 100;
+    // padding-left: var(--gutter);
+  
+}
+
+.secondary-navigation__list {
+    display: flex;
+    
+    
+}
+
+.secondary-navigation__item {
+    padding: calc(var(--baseline)/2);
+    color: var(--brand-color);
+
+}
+
+.secondary-navigation__link {
+    text-decoration: none;
+    color: var(--brand-color);
+    font-family: "roboto";
+    
+    
+}
+
+.secondary-navigation__link:hover {
+    text-decoration: underline;
+    color: var(--brand-color);
+    text-underline-offset: var(--baseline);
+    
+    
+    
+    
+}

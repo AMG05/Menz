@@ -1,0 +1,33 @@
+.footer {
+    
+    .col {
+        height: 150px;
+    }
+}
+.footer__top {
+    padding-top: calc(var(--baseline)*2);
+    background-color: #042940;
+    color: #ffffff;
+    padding-bottom: calc(var(--baseline)*4);
+    border-bottom: 1px solid var(--brand-color-dark-grey);
+}
+.footer__bottom {
+    padding-top: calc(var(--baseline));
+    background-color: #042940;
+    color: #ffffff;
+}
+
+.footer__nav-title{
+    font-size: var(--font-size-plus-2);
+    font-weight: 600;
+    padding-bottom: calc(var(--baseline)/4);
+    color: #FFFFFF;
+
+}
+
+.footer__nav-link {
+    font-family: "roboto";
+    text-decoration: none;
+    color: #FFFFFF;
+
+}
