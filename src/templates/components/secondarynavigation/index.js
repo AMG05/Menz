@@ -5,7 +5,7 @@ export const SecondaryNavigation  = ({ children }) => {
     return <div class="sec-nav">
     <div class="wrap">
                 <div class="row">
-                    <div class="col xs-12 lg-7">
+                    <div class="col xs-12 lg-8">
                         <nav class="secondary-navigation">
                             <ul class="secondary-navigation__list">
                                 <li class="secondary-navigation__item">
@@ -25,6 +25,9 @@ export const SecondaryNavigation  = ({ children }) => {
                                 </li>
                                 <li class="secondary-navigation__item">
                                     <a href="/Home" class="secondary-navigation__link">Invoices</a>
+                                </li>
+                                <li class="secondary-navigation__item">
+                                    <a href="/Home" class="secondary-navigation__link">Document Archive</a>
                                 </li>
                             </ul>
                         </nav>
