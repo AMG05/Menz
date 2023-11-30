@@ -5,6 +5,7 @@ import SecondaryNavigation from '@templates/components/secondarynavigation';
 import Footer from '@templates/components/footer';
 import Table from '@templates/components/table';
 import Tabs from '@templates/components/tabs';
+import Modal from '@templates/components/modal';
 
 export const title = 'Home';
 
@@ -24,13 +25,11 @@ const HomePage = () => <DefaultLayout>
     </PageTitle>
     </div>
 
-<div class="tab-container">
 
-    <div class="wrap">
-        <div class="row">
-            <div class="col xs-12">
-            <div class="tabs js-tabs">
-                    <div class="tabs__tabslist" role="tablist">
+    <div class="tabs js-tabs">
+        <div class="wrap">
+            <div class="row">
+                <div class="tabs__tabslist" role="tablist">
                         <a 
                         id="tab-1" 
                         class="tabs__tab js-tabs__link" 
@@ -52,8 +51,15 @@ const HomePage = () => <DefaultLayout>
                         role="tab">
                         Last chance for credit
                         </a>
-                    </div>
                 </div>
+            </div>
+        </div>
+                   
+                </div>
+<div class="tab__container">
+    <div class="wrap">
+        <div class="row">
+            <div class="col xs-12">
                 <div class="tabs__body">
                 <div id="recall-note" class="tabs__tabpanel" role="tabpanel">
                     <div class="wrap">
@@ -73,13 +79,55 @@ const HomePage = () => <DefaultLayout>
                                         </div>
                                         <div class="table-data-right">
                                             <h2 class="table-detail">Download</h2>
-                                            <p class="table-info">PDF</p>
+                                            <a href="./abcf32x.pdf" download="How-to-download-file.pdf" class="table-info">PDF</a>
                                         </div>
                                     </div>
                                     <div class="right">
-                                        <button class="table-data__btn-blue">Returns not collected today</button>
-                                    </div>
-                                </div>
+    <button class="table-data__btn-blue modal-confirmation__btn js-modal-confirmation__btn" type="button">Returns not collected today</button>
+    <div id="modal-confirmation" aria-labelledby="modal-label" role="region" class="js-modal-confirmation modal-confirmation modal-container" data-modal-toggle="js-modal-confirmation__btn">
+        <div class="modal" role="alertdialog" aria-labelledby="modal-label" aria-describedby="modal-description">
+            <div class="modal__header">
+                    <h1 class="modal__header-title">Returns not collected</h1>
+                    
+                    <button type="" class="modal-confirmation__btn-close js-modal-confirmation__btn" aria-label="close">
+                    <span class="modal-confirmation__btn-close-icon-label">Close</span>
+                        <svg class="exclusive-nav__close-icon" focusable="false" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 17.999 18">
+                            <g data-name="Group 11561" fill="#333">
+                            <path data-name="Path 12311" d="M16.687 18-.001 1.312 1.31 0l16.688 16.689Z"></path>
+                            <path data-name="Path 12313" d="M18 1.311 1.311 18 0 16.689 16.688 0Z"></path>
+                            </g>
+                        </svg>
+                        
+                    </button>
+
+        </div>
+        <form class="modal__form modal-confirmation__form" action="#" method="post">
+            <p id="modal description" class="modal-description">We apologize for any inconvenience caused by uncollected returns. To help us better track and collect your returns, please indicate the number of days worth of returns that have not been collected. </p>
+            <p d="modal description" class="modal-form-info">Please select either 1 day or more than 1 day from the option below.</p>
+            <div class="form-radios" data-module="form-radios">
+                <div class="form-radios__item">
+                    <input class="form-radios__input" type="radio" id="oneDay" name="duration" value="1" />
+                    <label class="form-radios__label" for="oneDay">
+                        1 day
+                    </label>
+                </div>
+                <div class="form-radios__item">
+                    <input class="form-radios__input" type="radio" id="manyDays" name="duration" value="2" />
+                    <label class="form-radios__label" for="manyDays">
+                        More than 1 day
+                    </label>
+                </div>
+            </div>
+            <div class="modal-confirmation__row">
+                <button type="submit" class="modal-confirmation__confirm">Submit request for collection</button>
+                <button type="submit" class="modal-confirmation__cancel js-modal-confirmation__btn">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>
+</div>
+                                   </div>
+                                
                                 
                             </div>
                         </div>
@@ -111,21 +159,27 @@ const HomePage = () => <DefaultLayout>
                                         </div>
                                     </div>
                                     <div class="search__btn">
-                                        <button class="table__btn-blue">Submit</button>
+                                        <button class="table__btn-blue"type="submit">Submit</button>
                                     </div>
                                 </div>
                 </form>
                       
     </div>
     </div>
+    <form class="table-form" action="#" method="post">
         <div class="table__container">
-        <Table />
-        <div class="table-button__container">
-                <button class="table__btn-blue">Save for my own reference</button>
-                <button class="table__btn-white">Add additional query</button>
+        <Table headings={['Title', 'We delivered', 'You are returning', 'Difference']} />
+        {/* <Table headings={['Title 1', 'Title 2', 'Title 3']} /> */}
+        
+            <div class="table-button__container">
+                    <button type="submit" id="amount" class="table__btn-blue">Save for my own reference</button>
+                    <button type="submit" class="table__btn-white">Add additional query</button>
             </div>
         </div>
+        </form>
+        
 </div>
+
                 </div>
                 </div>
                 <div id="future-recall" class="tabs__tabpanel" role="tabpanel" hidden>
@@ -178,37 +232,253 @@ const HomePage = () => <DefaultLayout>
                                         </div>
                                     </div>
                                     <div class="search__btn">
-                                        <button class="table__btn-blue">Submit</button>
+                                        <button class="table__btn-blue" type="submit">Submit</button>
                                     </div>
                                 </div>
                 </form>
                       
     </div>
     </div>
-    <Table  title="Title"
-            title="Start Date"
-            title="End Date" />
+    <div class="table__container">
+    <table class="table table--statements">
+            <thead class="table__head">
+                <tr class="table__row">
+                <th class="table__header">Title</th>
+                <th class="table__header">Start Date</th>
+                <th class="table__header">End Date</th>
+                </tr>
+            </thead>
+                <tbody class="table__bd">
+                    <tr class="table__row">
+                        <td data-th="Date" class="table__cell">
+                            <div class="table__cell-title-link">
+                                <a class="table__link" href="/" tabindex="-1">Auto Express</a>
+                            </div>
+                            <div class="table__cell-title-info">
+                                <ul>
+                                    <li>12.03.23 - Magazines</li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td data-th="Transactions" class="table__cell">04/04/2023</td>
+                        <td data-th="Balance" class="table__cell">19/04/2023</td>
+                    </tr>
+                    <tr class="table__row">
+                        <td data-th="Date" class="table__cell"><div class="table__cell-title-link">
+                                <a class="table__link" href="/" tabindex="-1">Auto Express</a>
+                            </div>
+                            <div class="table__cell-title-info">
+                                <ul>
+                                    <li>12.03.23 - Magazines</li>
+                                </ul>
+                            </div></td>
+                            <td data-th="Transactions" class="table__cell">04/04/2023</td>
+                        <td data-th="Balance" class="table__cell">19/04/2023</td>
+                    </tr>
+                    <tr class="table__row">
+                        <td data-th="Date" class="table__cell"><div class="table__cell-title-link">
+                                <a class="table__link" href="/" tabindex="-1">Auto Express</a>
+                            </div>
+                            <div class="table__cell-title-info">
+                                <ul>
+                                    <li>12.03.23 - Magazines</li>
+                                </ul>
+                            </div></td>
+                            <td data-th="Transactions" class="table__cell">04/04/2023</td>
+                        <td data-th="Balance" class="table__cell">19/04/2023</td>
+                    </tr>
+                    <tr class="table__row">
+                        <td data-th="Date" class="table__cell"><div class="table__cell-title-link">
+                                <a class="table__link" href="/" tabindex="-1">Auto Express</a>
+                            </div>
+                            <div class="table__cell-title-info">
+                                <ul>
+                                    <li>12.03.23 - Magazines</li>
+                                </ul>
+                            </div></td>
+                            <td data-th="Transactions" class="table__cell">04/04/2023</td>
+                        <td data-th="Balance" class="table__cell">19/04/2023</td>
+                    </tr>
+                    <tr class="table__row">
+                        <td data-th="Date" class="table__cell"><div class="table__cell-title-link">
+                                <a class="table__link" href="/" tabindex="-1">Auto Express</a>
+                            </div>
+                            <div class="table__cell-title-info">
+                                <ul>
+                                    <li>12.03.23 - Magazines</li>
+                                </ul>
+                            </div></td>
+                            <td data-th="Transactions" class="table__cell">04/04/2023</td>
+                        <td data-th="Balance" class="table__cell">19/04/2023</td>
+                    </tr>
+                    <tr class="table__row">
+                        <td data-th="Date" class="table__cell"><div class="table__cell-title-link">
+                                <a class="table__link" href="/" tabindex="-1">Auto Express</a>
+                            </div>
+                            <div class="table__cell-title-info">
+                                <ul>
+                                    <li>12.03.23 - Magazines</li>
+                                </ul>
+                            </div></td>
+                            <td data-th="Transactions" class="table__cell">04/04/2023</td>
+                        <td data-th="Balance" class="table__cell">19/04/2023</td>
+                    </tr>
+                    <tr class="table__row">
+                        <td data-th="Date" class="table__cell"><div class="table__cell-title-link">
+                                <a class="table__link" href="/" tabindex="-1">Auto Express</a>
+                            </div>
+                            <div class="table__cell-title-info">
+                                <ul>
+                                    <li>12.03.23 - Magazines</li>
+                                </ul>
+                            </div></td>
+                        <td data-th="Transactions" class="table__cell">04/04/2023</td>
+                        <td data-th="Balance" class="table__cell">19/04/2023</td>
+                    </tr>
+                    <tr class="table__row">
+                        <td data-th="Date" class="table__cell"><div class="table__cell-title-link">
+                                <a class="table__link" href="/" tabindex="-1">Auto Express</a>
+                            </div>
+                            <div class="table__cell-title-info">
+                                <ul>
+                                    <li>12.03.23 - Magazines</li>
+                                </ul>
+                            </div></td>
+                            <td data-th="Transactions" class="table__cell">04/04/2023</td>
+                            <td data-th="Balance" class="table__cell">19/04/2023</td>
+                    </tr>
+                </tbody>
+               
+</table>
+    </div>
 
-
-
-                       
                     <Tabs />
-                    <p>Panel 2</p>
-                    <p>
-                        <a href="/">Test link</a>
-                    </p>
-                    <p>
-                        <a href="/">Test link</a>
-                    </p>
+                   
                 </div>
                 <div id="panel-3" class="tabs__tabpanel" role="tabpanel" hidden>
-                    <p>Panel 3</p>
-                    <p>
-                        <a href="/">Test link</a>
-                    </p>
-                    <p>
-                        <a href="/">Test link</a>
-                    </p>
+                <div class="wrap">
+                        <div class="row panel-container">
+                            <div class="col xs-6">
+                                <div class="left">
+                                    <h2 class="table-detail">Last chance to Return is:</h2>
+                                    <h3 class="table-info">Tomorrow</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table__container">
+                    <table class="table table--statements">
+            <thead class="table__head">
+                <tr class="table__row">
+                <th class="table__header">Title</th>
+                <th class="table__header">Return By</th>
+                <th class="table__header">We deliver</th>
+                </tr>
+            </thead>
+                <tbody class="table__bd">
+                    <tr class="table__row">
+                        <td data-th="Date" class="table__cell">
+                            <div class="table__cell-title-link">
+                                <a class="table__link" href="/" tabindex="-1">Auto Express</a>
+                            </div>
+                            <div class="table__cell-title-info">
+                                <ul>
+                                    <li>12.03.23 - Magazines</li>
+                                </ul>
+                            </div>
+                        </td>
+                        <td data-th="Transactions" class="table__cell">04/04/2023</td>
+                        <td data-th="Balance" class="table__cell">15</td>
+                    </tr>
+                    <tr class="table__row">
+                        <td data-th="Date" class="table__cell"><div class="table__cell-title-link">
+                                <a class="table__link" href="/" tabindex="-1">Auto Express</a>
+                            </div>
+                            <div class="table__cell-title-info">
+                                <ul>
+                                    <li>12.03.23 - Magazines</li>
+                                </ul>
+                            </div></td>
+                            <td data-th="Transactions" class="table__cell">04/04/2023</td>
+                        <td data-th="Balance" class="table__cell">15</td>
+                    </tr>
+                    <tr class="table__row">
+                        <td data-th="Date" class="table__cell"><div class="table__cell-title-link">
+                                <a class="table__link" href="/" tabindex="-1">Auto Express</a>
+                            </div>
+                            <div class="table__cell-title-info">
+                                <ul>
+                                    <li>12.03.23 - Magazines</li>
+                                </ul>
+                            </div></td>
+                            <td data-th="Transactions" class="table__cell">04/04/2023</td>
+                        <td data-th="Balance" class="table__cell">15</td>
+                    </tr>
+                    <tr class="table__row">
+                        <td data-th="Date" class="table__cell"><div class="table__cell-title-link">
+                                <a class="table__link" href="/" tabindex="-1">Auto Express</a>
+                            </div>
+                            <div class="table__cell-title-info">
+                                <ul>
+                                    <li>12.03.23 - Magazines</li>
+                                </ul>
+                            </div></td>
+                            <td data-th="Transactions" class="table__cell">04/04/2023</td>
+                        <td data-th="Balance" class="table__cell">15</td>
+                    </tr>
+                    <tr class="table__row">
+                        <td data-th="Date" class="table__cell"><div class="table__cell-title-link">
+                                <a class="table__link" href="/" tabindex="-1">Auto Express</a>
+                            </div>
+                            <div class="table__cell-title-info">
+                                <ul>
+                                    <li>12.03.23 - Magazines</li>
+                                </ul>
+                            </div></td>
+                            <td data-th="Transactions" class="table__cell">04/04/2023</td>
+                        <td data-th="Balance" class="table__cell">15</td>
+                    </tr>
+                    <tr class="table__row">
+                        <td data-th="Date" class="table__cell"><div class="table__cell-title-link">
+                                <a class="table__link" href="/" tabindex="-1">Auto Express</a>
+                            </div>
+                            <div class="table__cell-title-info">
+                                <ul>
+                                    <li>12.03.23 - Magazines</li>
+                                </ul>
+                            </div></td>
+                            <td data-th="Transactions" class="table__cell">04/04/2023</td>
+                        <td data-th="Balance" class="table__cell">15</td>
+                    </tr>
+                    <tr class="table__row">
+                        <td data-th="Date" class="table__cell"><div class="table__cell-title-link">
+                                <a class="table__link" href="/" tabindex="-1">Auto Express</a>
+                            </div>
+                            <div class="table__cell-title-info">
+                                <ul>
+                                    <li>12.03.23 - Magazines</li>
+                                </ul>
+                            </div></td>
+                        <td data-th="Transactions" class="table__cell">04/04/2023</td>
+                        <td data-th="Balance" class="table__cell">15</td>
+                    </tr>
+                    <tr class="table__row">
+                        <td data-th="Date" class="table__cell"><div class="table__cell-title-link">
+                                <a class="table__link" href="/" tabindex="-1">Auto Express</a>
+                            </div>
+                            <div class="table__cell-title-info">
+                                <ul>
+                                    <li>12.03.23 - Magazines</li>
+                                </ul>
+                            </div></td>
+                            <td data-th="Transactions" class="table__cell">04/04/2023</td>
+                            <td data-th="Balance" class="table__cell">15</td>
+                    </tr>
+                </tbody>
+               
+</table>
+                    </div>
+                    
                 </div>
             </div>
             </div>

@@ -3,9 +3,9 @@ import DefaultLayout from '@layouts/default';
 
 export const title = 'Home'; 
 
-const CustomersPage = () => <DefaultLayout>
+const Notifications = () => <DefaultLayout>
     
 
     </DefaultLayout>;
 
-export default CustomersPage;
+export default Notifications;

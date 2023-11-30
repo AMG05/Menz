@@ -31,6 +31,19 @@
     }
 }
 
+.navigation__link-icon:after{
+    content: "";
+    position: absolute;
+    right: -20%;
+    top: 30%;
+    width:11px;
+    height:11px;
+    border-top: 2px solid #000;
+    border-right: 2px solid #000;
+    transform: rotate(-225deg);
+
+}
+
 .navigation__link{
     color:var(--brand-color);
     font-family: "roboto";

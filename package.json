@@ -84,8 +84,10 @@
   },
   "dependencies": {
     "@microsoft/applicationinsights-web": "^2.2.4",
+    "@stormid/modal": "^1.0.0-alpha.15",
     "@stormid/tabs": "^1.0.0-alpha.12",
     "@stormid/toggle": "^1.0.0-alpha.18",
+    "@stormid/validate": "^1.0.0-alpha.31",
     "es6-object-assign": "^1.1.0",
     "picturefill": "^3.0.3",
     "promise-polyfill": "^8.1.0"

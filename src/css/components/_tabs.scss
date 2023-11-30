@@ -1,5 +1,5 @@
-.tab-container{
-    background-color: #F6f6f6;
+.tab__container{
+    // background-color: #F6f6f6;
 
 }
 
@@ -9,7 +9,7 @@
 
 
 .tabs {
-    // margin: var(--baseline) var(--gutter);
+//    background-color: white;
 }
 
 .tabs__tabslist {
@@ -26,6 +26,7 @@
 
 
 .tabs__tab {
+    
     text-decoration: none;
     
     // display: block;
@@ -42,13 +43,19 @@
 .js-tabs .is--active {
     background-color: #F6f6f6;
     border-top: 2px solid #FFDD00;
-    height: 36px;
+    height: calc(var(--baseline)*2);
+    font-weight: 600;
 }
 
 .js-tabs{
     height: calc(var(--gutter)*2);
+    background-color: white;
 }
 
 .tabs__tabpanel {
     padding-top: calc(var(--baseline));
+}
+
+.my-account__container{
+    height: 1200px;
 }
