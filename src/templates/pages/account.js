@@ -34,7 +34,7 @@ const Account = () => <DefaultLayout>
                     <div class="col xs-12 md-6">
                         <div id="settings" class="tabs__tabpanel" role="tabpanel">
                            <div class="">
-                                <form action="" method="post" class="form form-accounts">
+                                <form action="" method="post" class="form form-accounts form js-validate">
                                     <fieldset>
                                         <legend class="form-legend">
                                             <h1 class="form__title">Account settings</h1>
@@ -45,7 +45,7 @@ const Account = () => <DefaultLayout>
                                             <label class="form-label" for="firstname">
                                                 First name
                                             </label>
-                                            <span class="error-message" data-valmsg-for="fname">This must be provided</span>
+                                            <span class="error-message" data-valmsg-for="firstname">This must be provided</span>
 			                                    <input data-val="true" data-val-required="First name must not be empty" autocomplete="given-name" class="form-input" id="firstname" name="firstname" aria-required="true" />
                                         </div>
                                         <div class="form-group">

@@ -40,7 +40,7 @@
 
 .table__container {
   padding-top: calc(var(--baseline));
-  // margin: 0 var(--gutter);
+  width: 100%;
 }
 .table {
   width:100%;
@@ -80,6 +80,14 @@
   
   // border-bottom: 1px solid rgba(0,0,0, .1);
 }
+
+.table__header:first-child{
+  width: 30%;
+}
+
+.table__header:nth-child(2){
+  width: 20%;
+} 
 .table__cell {
   color: var(--brand-color);
   font-family: "roboto";
