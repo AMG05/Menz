@@ -1,0 +1,34 @@
+.btn{
+    padding: calc(var(--baseline)/2);
+    font-family: "roboto";
+    color: white;
+    background-color: var(--brand-color);
+    margin-right: calc(var(--gutter)/2);
+        &:hover,
+        &:focus {
+            transition: background-color 120ms ease;
+            background-color: white;
+            color: var(--off-black);
+        }
+}
+
+.btn-white{
+padding: calc(var(--baseline)/2);
+  font-family: "roboto";
+  color: var(--brand-color);
+  background-color: white;
+  border: 1px solid var(--brand-color);
+    &:hover,
+    &:focus {
+        transition: background-color 120ms ease;
+        background-color: var(--brand-color);
+        color:white;
+    }
+}
+
+.btn__container {
+    display: flex;
+    border-bottom: 24px;
+    margin-bottom: calc(var(--gutter));
+    margin-top: calc(var(--gutter))
+}

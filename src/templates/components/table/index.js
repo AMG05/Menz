@@ -2,9 +2,9 @@ import { title } from '@templates/pages';
 import { h } from 'preact';
 import HomePage from '@templates/pages';
 
-const Table = ({ headings }) => <table class="table table--statements">
+const Table = ({ headings }) => <table class="table">
             <thead class="table__head">
-                <tr class="table__row">
+                <tr class="table__head__row">
                 {headings.map(heading => <th class="table__header">{heading}</th>)}
                 </tr>
             </thead>

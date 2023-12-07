@@ -29,76 +29,8 @@ font-family: "roboto";
 }
 
 .form-input{
-    border: 2px solid var(--brand-color-dark-grey);
-}
-
-.form-group-btns{
-    padding-top: var(--gutter);
-}
-
-// .form-checkboxes{
-//     padding-top: calc(var(--gutter)/2);
-//     padding-bottom: calc(var(--gutter)/2);
-// }
-
-// input[type=checkbox]{
-// transform: scale(2);
-// }
-
-.form-checkboxes__label{
-    padding-left: var(--gutter);
-    font-size: var(--font-size-baseline);
-    
-
-}
-
-.form-checkboxes {
-    display: block;
-    position: relative;
-    min-height: 24px;
-    padding: 0 0 0 36px;
-    clear: left;
-    padding-top: calc(var(--gutter)/2);
-        padding-bottom: calc(var(--gutter)/2);
+    border: 2px solid var(--brand-color);
+    font-size: var(--font-size-plus-2);
 }
 
 
-
-.form-checkboxes__input{
-    position: absolute;
-    z-index: 1;
-    left: 0;
-    width: 24px;
-    height: 24px;
-    cursor: pointer;
-
-}
-
-.form-checkboxes__subLabel{
-    font-size: var(--font-size-minus-1);
-    display: block;
-    padding-left: var(--gutter);
-    position: relative;
-    bottom: 0;
-}
-
-.form-checkboxes__input:checked {
-    background-color: var(--brand-color);
-        // content: "";
-        // position: absolute;
-        // top: 6px;
-        // left: 5px;
-        // width: 14px;
-        // height: 8px;
-        // transform: rotate(-45deg);
-        // border: solid;
-        // border-width: 0 0 3px 3px;
-        // border-top-color: transparent;
-    
-}
-
-.error-message{
-    display: none;
-    color: red;
-    font-family: "roboto";
-}

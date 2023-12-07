@@ -6,6 +6,7 @@ import Footer from '@templates/components/footer';
 import Table from '@templates/components/table';
 import Tabs from '@templates/components/tabs';
 import Modal from '@templates/components/modal';
+import PrimaryButton from '@templates/components/forms/primarybutton';
 
 export const title = 'Home';
 
@@ -16,7 +17,16 @@ export const title = 'Home';
 
 const HomePage = () => <DefaultLayout>
 
-    <SecondaryNavigation />
+    <SecondaryNavigation
+    links={[
+        { title: 'Home', href: '/home' },
+        { title: 'Deliveries', href: '/deliveries' },
+        { title: 'Returns', href: '/returns' },
+        { title: 'Order Management', href: '/ordermanagement' },
+        { title: 'Credits', href: '/credits' },
+        { title: 'Invoices', href: '/invoices' },
+        { title: 'Document Archive', href: '/archive' }]}
+        />
 
     <div class="banner">
     <PageTitle
@@ -54,8 +64,8 @@ const HomePage = () => <DefaultLayout>
                 </div>
             </div>
         </div>
-                   
-                </div>
+    </div>
+
 <div class="tab__container">
     <div class="wrap">
         <div class="row">
@@ -84,7 +94,9 @@ const HomePage = () => <DefaultLayout>
                                     </div>
                                     <div class="right">
     <button class="table-data__btn-blue modal-confirmation__btn js-modal-confirmation__btn" type="button">Returns not collected today</button>
+    
     <div id="modal-confirmation" aria-labelledby="modal-label" role="region" class="js-modal-confirmation modal-confirmation modal-container" data-modal-toggle="js-modal-confirmation__btn">
+    <div class="">
         <div class="modal" role="alertdialog" aria-labelledby="modal-label" aria-describedby="modal-description">
             <div class="modal__header">
                     <h1 class="modal__header-title">Returns not collected</h1>
@@ -124,7 +136,9 @@ const HomePage = () => <DefaultLayout>
             </div>
         </form>
     </div>
+    </div>
 </div>
+
 </div>
                                    </div>
                                 
@@ -138,7 +152,7 @@ const HomePage = () => <DefaultLayout>
                                     
                                     <div class="search-table">
                                         <label class="search__label" for="search">Search information</label>
-                                        <input class="search__input-filter" type="search" placeholder="Search" id="search" name="q" />
+                                        <input class="search__input-filter" type="search" placeholder="Search by title" id="search" name="q" />
                                         <button class="search__submit-btn--table" type="submit">
                                         <span class="visuallyhidden">Search</span>
                                         <svg class="search__submit-icon" focusable="false" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" height="36px" viewBox="0 0 24 24"
@@ -151,7 +165,7 @@ const HomePage = () => <DefaultLayout>
                                         </div>
                                         <div class="search-filter-element">
                                         <select class="search-filter-select" id="type" name="type">
-                                            <option value="all">All Types</option>
+                                            <option value="all">All</option>
                                             <option value="type1">Type 1</option>
                                             <option value="type2">Type 2</option>
                                             <option value="type3">Type 3</option>
@@ -159,21 +173,25 @@ const HomePage = () => <DefaultLayout>
                                         </div>
                                     </div>
                                     <div class="search__btn">
-                                        <button class="table__btn-blue"type="submit">Submit</button>
+                                        <PrimaryButton
+                                            text="Submit"
+                                            type="submit" />
                                     </div>
                                 </div>
                 </form>
-                      
+      
     </div>
     </div>
-    <form class="table-form" action="#" method="post">
+
+
+    <form class="form" action="#" method="post">
         <div class="table__container">
-        <Table headings={['Title', 'We delivered', 'You are returning', 'Difference']} />
-        {/* <Table headings={['Title 1', 'Title 2', 'Title 3']} /> */}
+            <Table headings={['Title', 'We delivered', 'You are returning', 'Difference']} />
         
-            <div class="table-button__container">
-                    <button type="submit" id="amount" class="table__btn-blue">Save for my own reference</button>
-                    <button type="submit" class="table__btn-white">Add additional query</button>
+        
+            <div class="btn__container">
+                    <button type="submit" id="amount" class="btn">Save for my own reference</button>
+                    <button type="submit" class="btn-white">Add additional query</button>
             </div>
         </div>
         </form>
@@ -244,7 +262,7 @@ const HomePage = () => <DefaultLayout>
             <thead class="table__head">
                 <tr class="table__row">
                 <th class="table__header">Title</th>
-                <th class="table__header">Start Date</th>
+                <th class="table__header table__header--center">Start Date</th>
                 <th class="table__header">End Date</th>
                 </tr>
             </thead>
@@ -260,7 +278,7 @@ const HomePage = () => <DefaultLayout>
                                 </ul>
                             </div>
                         </td>
-                        <td data-th="Transactions" class="table__cell">04/04/2023</td>
+                        <td data-th="Transactions" class="table__cell table__cell--center">04/04/2023</td>
                         <td data-th="Balance" class="table__cell">19/04/2023</td>
                     </tr>
                     <tr class="table__row">
@@ -272,7 +290,7 @@ const HomePage = () => <DefaultLayout>
                                     <li>12.03.23 - Magazines</li>
                                 </ul>
                             </div></td>
-                            <td data-th="Transactions" class="table__cell">04/04/2023</td>
+                            <td data-th="Transactions" class="table__cell table__cell--center">04/04/2023</td>
                         <td data-th="Balance" class="table__cell">19/04/2023</td>
                     </tr>
                     <tr class="table__row">
@@ -284,7 +302,7 @@ const HomePage = () => <DefaultLayout>
                                     <li>12.03.23 - Magazines</li>
                                 </ul>
                             </div></td>
-                            <td data-th="Transactions" class="table__cell">04/04/2023</td>
+                            <td data-th="Transactions" class="table__cell table__cell--center">04/04/2023</td>
                         <td data-th="Balance" class="table__cell">19/04/2023</td>
                     </tr>
                     <tr class="table__row">
@@ -296,7 +314,7 @@ const HomePage = () => <DefaultLayout>
                                     <li>12.03.23 - Magazines</li>
                                 </ul>
                             </div></td>
-                            <td data-th="Transactions" class="table__cell">04/04/2023</td>
+                            <td data-th="Transactions" class="table__cell table__cell--center">04/04/2023</td>
                         <td data-th="Balance" class="table__cell">19/04/2023</td>
                     </tr>
                     <tr class="table__row">
@@ -308,7 +326,7 @@ const HomePage = () => <DefaultLayout>
                                     <li>12.03.23 - Magazines</li>
                                 </ul>
                             </div></td>
-                            <td data-th="Transactions" class="table__cell">04/04/2023</td>
+                            <td data-th="Transactions" class="table__cell table__cell--center">04/04/2023</td>
                         <td data-th="Balance" class="table__cell">19/04/2023</td>
                     </tr>
                     <tr class="table__row">
@@ -320,7 +338,7 @@ const HomePage = () => <DefaultLayout>
                                     <li>12.03.23 - Magazines</li>
                                 </ul>
                             </div></td>
-                            <td data-th="Transactions" class="table__cell">04/04/2023</td>
+                            <td data-th="Transactions" class="table__cell table__cell--center">04/04/2023</td>
                         <td data-th="Balance" class="table__cell">19/04/2023</td>
                     </tr>
                     <tr class="table__row">
@@ -332,7 +350,7 @@ const HomePage = () => <DefaultLayout>
                                     <li>12.03.23 - Magazines</li>
                                 </ul>
                             </div></td>
-                        <td data-th="Transactions" class="table__cell">04/04/2023</td>
+                        <td data-th="Transactions" class="table__cell table__cell--center">04/04/2023</td>
                         <td data-th="Balance" class="table__cell">19/04/2023</td>
                     </tr>
                     <tr class="table__row">
@@ -344,15 +362,19 @@ const HomePage = () => <DefaultLayout>
                                     <li>12.03.23 - Magazines</li>
                                 </ul>
                             </div></td>
-                            <td data-th="Transactions" class="table__cell">04/04/2023</td>
+                            <td data-th="Transactions" class="table__cell table__cell--center">04/04/2023</td>
                             <td data-th="Balance" class="table__cell">19/04/2023</td>
                     </tr>
                 </tbody>
                
 </table>
+<div class="btn__container">
+                    <button type=" submit" id="amount" class="btn">Save for my own reference</button>
+                    <button type="submit" class="btn-white">Add additional query</button>
+            </div>
     </div>
 
-                    <Tabs />
+                   
                    
                 </div>
                 <div id="panel-3" class="tabs__tabpanel" role="tabpanel" hidden>
@@ -371,8 +393,9 @@ const HomePage = () => <DefaultLayout>
             <thead class="table__head">
                 <tr class="table__row">
                 <th class="table__header">Title</th>
-                <th class="table__header">Return By</th>
+                <th class="table__header table__header--center">Return By</th>
                 <th class="table__header">We deliver</th>
+
                 </tr>
             </thead>
                 <tbody class="table__bd">
@@ -387,7 +410,55 @@ const HomePage = () => <DefaultLayout>
                                 </ul>
                             </div>
                         </td>
-                        <td data-th="Transactions" class="table__cell">04/04/2023</td>
+                        <td data-th="Transactions" class="table__cell table__cell--center">04/04/2023</td>
+                        <td data-th="Balance" class="table__cell table__cell--left">15</td>
+                    </tr>
+                    <tr class="table__row">
+                        <td data-th="Date" class="table__cell"><div class="table__cell-title-link">
+                                <a class="table__link" href="/" tabindex="-1">Auto Express</a>
+                            </div>
+                            <div class="table__cell-title-info">
+                                <ul>
+                                    <li>12.03.23 - Magazines</li>
+                                </ul>
+                            </div></td>
+                            <td data-th="Transactions" class="table__cell table__cell--center">04/04/2023</td>
+                        <td data-th="Balance" class="table__cell table__cell--left">15</td>
+                    </tr>
+                    <tr class="table__row">
+                        <td data-th="Date" class="table__cell"><div class="table__cell-title-link">
+                                <a class="table__link" href="/" tabindex="-1">Auto Express</a>
+                            </div>
+                            <div class="table__cell-title-info">
+                                <ul>
+                                    <li>12.03.23 - Magazines</li>
+                                </ul>
+                            </div></td>
+                            <td data-th="Transactions" class="table__cell table__cell--center">04/04/2023</td>
+                        <td data-th="Balance" class="table__cell table__cell--left">15</td>
+                    </tr>
+                    <tr class="table__row">
+                        <td data-th="Date" class="table__cell"><div class="table__cell-title-link">
+                                <a class="table__link" href="/" tabindex="-1">Auto Express</a>
+                            </div>
+                            <div class="table__cell-title-info">
+                                <ul>
+                                    <li>12.03.23 - Magazines</li>
+                                </ul>
+                            </div></td>
+                            <td data-th="Transactions" class="table__cell table__cell--center">04/04/2023</td>
+                        <td data-th="Balance" class="table__cell table__cell--left">15</td>
+                    </tr>
+                    <tr class="table__row">
+                        <td data-th="Date" class="table__cell"><div class="table__cell-title-link">
+                                <a class="table__link" href="/" tabindex="-1">Auto Express</a>
+                            </div>
+                            <div class="table__cell-title-info">
+                                <ul>
+                                    <li>12.03.23 - Magazines</li>
+                                </ul>
+                            </div></td>
+                            <td data-th="Transactions" class="table__cell table__cell--center">04/04/2023</td>
                         <td data-th="Balance" class="table__cell">15</td>
                     </tr>
                     <tr class="table__row">
@@ -399,7 +470,7 @@ const HomePage = () => <DefaultLayout>
                                     <li>12.03.23 - Magazines</li>
                                 </ul>
                             </div></td>
-                            <td data-th="Transactions" class="table__cell">04/04/2023</td>
+                            <td data-th="Transactions" class="table__cell table__cell--center">04/04/2023</td>
                         <td data-th="Balance" class="table__cell">15</td>
                     </tr>
                     <tr class="table__row">
@@ -411,7 +482,7 @@ const HomePage = () => <DefaultLayout>
                                     <li>12.03.23 - Magazines</li>
                                 </ul>
                             </div></td>
-                            <td data-th="Transactions" class="table__cell">04/04/2023</td>
+                        <td data-th="Transactions" class="table__cell table__cell--center">04/04/2023</td>
                         <td data-th="Balance" class="table__cell">15</td>
                     </tr>
                     <tr class="table__row">
@@ -423,61 +494,17 @@ const HomePage = () => <DefaultLayout>
                                     <li>12.03.23 - Magazines</li>
                                 </ul>
                             </div></td>
-                            <td data-th="Transactions" class="table__cell">04/04/2023</td>
-                        <td data-th="Balance" class="table__cell">15</td>
-                    </tr>
-                    <tr class="table__row">
-                        <td data-th="Date" class="table__cell"><div class="table__cell-title-link">
-                                <a class="table__link" href="/" tabindex="-1">Auto Express</a>
-                            </div>
-                            <div class="table__cell-title-info">
-                                <ul>
-                                    <li>12.03.23 - Magazines</li>
-                                </ul>
-                            </div></td>
-                            <td data-th="Transactions" class="table__cell">04/04/2023</td>
-                        <td data-th="Balance" class="table__cell">15</td>
-                    </tr>
-                    <tr class="table__row">
-                        <td data-th="Date" class="table__cell"><div class="table__cell-title-link">
-                                <a class="table__link" href="/" tabindex="-1">Auto Express</a>
-                            </div>
-                            <div class="table__cell-title-info">
-                                <ul>
-                                    <li>12.03.23 - Magazines</li>
-                                </ul>
-                            </div></td>
-                            <td data-th="Transactions" class="table__cell">04/04/2023</td>
-                        <td data-th="Balance" class="table__cell">15</td>
-                    </tr>
-                    <tr class="table__row">
-                        <td data-th="Date" class="table__cell"><div class="table__cell-title-link">
-                                <a class="table__link" href="/" tabindex="-1">Auto Express</a>
-                            </div>
-                            <div class="table__cell-title-info">
-                                <ul>
-                                    <li>12.03.23 - Magazines</li>
-                                </ul>
-                            </div></td>
-                        <td data-th="Transactions" class="table__cell">04/04/2023</td>
-                        <td data-th="Balance" class="table__cell">15</td>
-                    </tr>
-                    <tr class="table__row">
-                        <td data-th="Date" class="table__cell"><div class="table__cell-title-link">
-                                <a class="table__link" href="/" tabindex="-1">Auto Express</a>
-                            </div>
-                            <div class="table__cell-title-info">
-                                <ul>
-                                    <li>12.03.23 - Magazines</li>
-                                </ul>
-                            </div></td>
-                            <td data-th="Transactions" class="table__cell">04/04/2023</td>
+                            <td data-th="Transactions" class="table__cell table__cell--center">04/04/2023</td>
                             <td data-th="Balance" class="table__cell">15</td>
                     </tr>
                 </tbody>
                
 </table>
                     </div>
+                    <div class="btn__container">
+                    <button type=" submit" id="amount" class="btn">Save for my own reference</button>
+                    <button type="submit" class="btn-white">Add additional query</button>
+            </div>
                     
                 </div>
             </div>

@@ -40,6 +40,10 @@
     //     outline: 0 none;
     // }
 
+.js-tabs__link{
+    padding-top: calc(var(--gutter)/2);
+}
+
 .js-tabs .is--active {
     background-color: #F6f6f6;
     border-top: 2px solid #FFDD00;
@@ -57,5 +61,5 @@
 }
 
 .my-account__container{
-    height: 1200px;
+    // height: 1200px;
 }

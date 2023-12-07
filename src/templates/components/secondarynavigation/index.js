@@ -1,6 +1,7 @@
 import { h } from 'preact';
 
-export const SecondaryNavigation  = ({ children }) => {
+
+export const SecondaryNavigation  = ({ links }) =>{
 
     return <div class="sec-nav">
     <div class="wrap">
@@ -8,27 +9,11 @@ export const SecondaryNavigation  = ({ children }) => {
                     <div class="col xs-12 lg-8">
                         <nav class="secondary-navigation">
                             <ul class="secondary-navigation__list">
-                                <li class="secondary-navigation__item">
-                                    <a href="/Home" class="secondary-navigation__link">Home</a>
-                                </li>
-                                <li class="secondary-navigation__item">
-                                    <a href="/Home" class="secondary-navigation__link">Deliveries</a>
-                                </li>
-                                <li class="secondary-navigation__item">
-                                    <a href="/Home" class="secondary-navigation__link">Returns</a>
-                                </li>
-                                <li class="secondary-navigation__item">
-                                    <a href="/Home" class="secondary-navigation__link">Order Management</a>
-                                </li>
-                                <li class="secondary-navigation__item">
-                                    <a href="/Home" class="secondary-navigation__link">Credits</a>
-                                </li>
-                                <li class="secondary-navigation__item">
-                                    <a href="/Home" class="secondary-navigation__link">Invoices</a>
-                                </li>
-                                <li class="secondary-navigation__item">
-                                    <a href="/Home" class="secondary-navigation__link">Document Archive</a>
-                                </li>
+                                {links.map(({ title, href }) => (
+                                        <li class="secondary-navigation__item">
+                                        <a href={href} class="secondary-navigation__link">{title}</a>
+                                    </li>
+                                ))}
                             </ul>
                         </nav>
                     </div>
