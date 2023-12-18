@@ -1,6 +1,7 @@
 import { title } from '@templates/pages';
 import { h } from 'preact';
 import HomePage from '@templates/pages';
+import Input from '../forms/input';
 
 const Table = ({ headings }) => <table class="table">
             <thead class="table__head">
@@ -21,7 +22,12 @@ const Table = ({ headings }) => <table class="table">
                             </div>
                         </td>
                         <td data-th="Transactions" class="table__cell">15</td>
-                        <td data-th="Amount" class="table__cell"><label /><input type="number" id="amount" class="table__cell-input" /></td>
+                        <td data-th="Amount" class="table__cell"><label />
+                        <Input
+                        type="text"
+                        className="table__cell-input"
+                        id="amount" />
+                        </td>
                         <td data-th="Balance" class="table__cell">3</td>
                         <td data-th="Balance" class="table__cell" />
                     </tr>
@@ -35,7 +41,11 @@ const Table = ({ headings }) => <table class="table">
                                 </ul>
                             </div></td>
                         <td data-th="Transactions" class="table__cell">15</td>
-                        <td data-th="Amount" class="table__cell"><label /><input type="number" class="table__cell-input" /></td>
+                        <td data-th="Amount" class="table__cell"><label />
+                        <Input
+                        type="text"
+                        className="table__cell-input"
+                        id="amount" /></td>
                         <td data-th="Balance" class="table__cell">3</td>
                         <td data-th="Balance" class="table__cell" />
                     </tr>
@@ -49,7 +59,11 @@ const Table = ({ headings }) => <table class="table">
                                 </ul>
                             </div></td>
                         <td data-th="Transactions" class="table__cell">15</td>
-                        <td data-th="Amount" class="table__cell"><label /><input type="number" class="table__cell-input" /></td>
+                        <td data-th="Amount" class="table__cell"><label />
+                        <Input
+                        type="text"
+                        className="table__cell-input"
+                        id="amount" /></td>
                         <td data-th="Balance" class="table__cell">3</td>
                         <td data-th="Balance" class="table__cell" />
                     </tr>
@@ -63,7 +77,11 @@ const Table = ({ headings }) => <table class="table">
                                 </ul>
                             </div></td>
                         <td data-th="Transactions" class="table__cell">15</td>
-                        <td data-th="Amount" class="table__cell"><label /><input type="number" class="table__cell-input" /></td>
+                        <td data-th="Amount" class="table__cell"><label />
+                        <Input
+                        type="text"
+                        className="table__cell-input"
+                        id="amount" /></td>
                         <td data-th="Balance" class="table__cell">3</td>
                         <td data-th="Balance" class="table__cell" />
                     </tr>
@@ -77,7 +95,11 @@ const Table = ({ headings }) => <table class="table">
                                 </ul>
                             </div></td>
                         <td data-th="Transactions" class="table__cell">15</td>
-                        <td data-th="Amount" class="table__cell"><label /><input type="number" class="table__cell-input" /></td>
+                        <td data-th="Amount" class="table__cell"><label />
+                        <Input
+                        type="text"
+                        className="table__cell-input"
+                        id="amount" /></td>
                         <td data-th="Balance" class="table__cell">3</td>
                         <td data-th="Balance" class="table__cell" />
                     </tr>
@@ -91,7 +113,11 @@ const Table = ({ headings }) => <table class="table">
                                 </ul>
                             </div></td>
                         <td data-th="Transactions" class="table__cell">15</td>
-                        <td data-th="Amount" class="table__cell"><label /><input type="number" class="table__cell-input" /></td>
+                        <td data-th="Amount" class="table__cell"><label />
+                        <Input
+                        type="text"
+                        className="table__cell-input"
+                        id="amount" /></td>
                         <td data-th="Balance" class="table__cell">3</td>
                         <td data-th="Balance" class="table__cell" />
                     </tr>
@@ -105,7 +131,11 @@ const Table = ({ headings }) => <table class="table">
                                 </ul>
                             </div></td>
                         <td data-th="Transactions" class="table__cell">15</td>
-                        <td data-th="Amount" class="table__cell"><label /><input type="number" class="table__cell-input" /></td>
+                        <td data-th="Amount" class="table__cell"><label />
+                        <Input
+                        type="text"
+                        className="table__cell-input"
+                        id="amount" /></td>
                         <td data-th="Balance" class="table__cell">3</td>
                         <td data-th="Balance" class="table__cell" />
                     </tr>
@@ -119,7 +149,11 @@ const Table = ({ headings }) => <table class="table">
                                 </ul>
                             </div></td>
                         <td data-th="Transactions" class="table__cell">15</td>
-                        <td data-th="Amount" class="table__cell"><label /><input type="number" class="table__cell-input" /></td>
+                        <td data-th="Amount" class="table__cell"><label />
+                        <Input
+                        type="text"
+                        className="table__cell-input"
+                        id="amount" /></td>
                         <td data-th="Balance" class="table__cell">3</td>
                         <td data-th="Balance" class="table__cell" />
                     </tr>

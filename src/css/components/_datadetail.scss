@@ -1,0 +1,41 @@
+.data__container{
+    padding-top: var(--baseline);
+    background-color: var(--brand-color-light-grey);
+   
+    
+}
+
+.data-detail{
+    display: flex;
+    justify-content: flex-end;
+    text-align: right;
+}
+
+.data-detail-group{
+    padding-right: calc(var(--gutter)/2);
+    
+}
+
+.data-detail-title{
+    font-family: "roboto";
+    font-size: var(--font-size-minus-1);
+}
+
+.data-detail-number{
+    font-family: "roboto";
+    font-size: var(--font-size-baseline);
+    font-weight: 600;
+}
+
+.data-download-group{
+    padding-left: calc(var(--gutter)/2);
+    border-left: 1px solid var(--brand-color-dark-grey);
+}
+
+.data-download__link{
+    color: var(--brand-color);
+    font-family: "roboto";
+    font-size: var(--font-size-baseline);
+    font-weight: 600;
+}
+

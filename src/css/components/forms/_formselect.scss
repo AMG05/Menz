@@ -1,0 +1,20 @@
+.form-select{
+        width: 80%;
+        // display: block;
+        padding: 0 calc(var(--gutter)/2);
+        background-color: #ffffff;
+        border: 1px solid var(--brand-color);
+        height: 40px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+        background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0Ij48cGF0aCBkPSJNMjQgMjRIMFYwaDI0djI0eiIgZmlsbD0ibm9uZSIgb3BhY2l0eT0iLjg3Ii8+PHBhdGggZD0iTTE2LjU5IDguNTlMMTIgMTMuMTcgNy40MSA4LjU5IDYgMTBsNiA2IDYtNi0xLjQxLTEuNDF6Ii8+PC9zdmc+');
+        background-repeat: no-repeat, repeat;
+        background-position: right calc(var(--gutter)/4) top 50%, 0 0;
+    
+}
+
+.option{
+    font-family: "roboto";
+}
+

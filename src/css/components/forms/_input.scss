@@ -1,0 +1,29 @@
+.table-input{
+        width: 30%;
+        // display: block;
+        padding: 0 calc(var(--gutter)/2);
+        background-color: #ffffff;
+        border: 1px solid var(--brand-color);
+        appearance: none;
+        -moz-appearance: textfield;
+        height: 40px;
+        line-height: 36px;
+        margin-top: calc(var(--baseline)/6);
+    
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+    
+        &:focus {
+            outline: 4px solid var(--highlight);
+        }
+    
+        &:disabled,
+        &[readonly] {
+            background-color: var(--light-grey-1);
+            pointer-events: none;
+            opacity: .7;
+        
+    }
+}

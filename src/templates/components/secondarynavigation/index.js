@@ -7,7 +7,7 @@ export const SecondaryNavigation  = ({ links }) =>{
     <div class="wrap">
                 <div class="row">
                     <div class="col xs-12 lg-8">
-                        <nav class="secondary-navigation">
+                        <nav class="secondary-navigation" aria-label="Secondary navigation">
                             <ul class="secondary-navigation__list">
                                 {links.map(({ title, href }) => (
                                         <li class="secondary-navigation__item">

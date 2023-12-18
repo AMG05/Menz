@@ -1,4 +1,6 @@
 import { h } from 'preact';
+import Input from '@components/forms/input';
+import FormSelect from '@components/forms/formselect';
 
 const TabularData = ({ caption, head, body }) => (
 
@@ -16,7 +18,8 @@ const TabularData = ({ caption, head, body }) => (
       {body.map((row, rowIndex) => (
         <tr class="table__row" key={rowIndex}>
           {row.columns.map((column, colIndex) => (
-            <td class="table__cell" key={colIndex}>{column.value}</td>
+            <td class="table__cell" key={colIndex}>
+                {column.value !== '' ? column.value :null}</td>
           ))}
         </tr>
       ))}

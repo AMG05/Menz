@@ -1,0 +1,22 @@
+.data-group{}
+
+.data-group__label{
+    font-family: "roboto";
+    font-size: var(--font-size-minus-1);
+}
+
+.data-select  {
+    font-family: "roboto";
+    font-size: var(--font-size-baseline);
+    font-weight: 600;
+    background-color: transparent;
+    padding: 0 calc(var(--gutter)/2);
+     height: 40px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+// .data-group__select{
+//     font-family:"roboto";
+//     font-size: var(--font-size-baseline);
+// }

@@ -1,21 +1,29 @@
-.tab__container{
-    // background-color: #F6f6f6;
-
+.tab__container {
+    height: 100%;
 }
-
 .tabs__body{
     background-color: #F6f6f6;
 }
 
-
-.tabs {
-//    background-color: white;
+.row .tabs__tabslist{
+    background-color: white;
 }
-
 .tabs__tabslist {
     display: flex;
-    // align-items: center;
+    max-width: none;
+    font-family: "roboto";
+    font-weight: 400;
+    background-color: white;
+    height: calc(var(--baseline)*2);
+
+}
+
+.tabs__tabslist .is--active {
+    border-top: 2px solid #FFDD00;
     
+}
+.tabs__nav {
+    display: flex;
     max-width: none;
     font-family: "roboto";
     font-weight: 400;
@@ -23,41 +31,46 @@
  
 }
 
-
-
-.tabs__tab {
-    
+.tabs__nav-link{
     text-decoration: none;
-    
-    // display: block;
     padding-left: var(--gutter);
     padding-right: var(--gutter);
-    // position: relative;
+    text-align: center;
+    padding-top: calc(var(--gutter)/2);
+}
+
+.tabs__tab {
+    text-decoration: none;
+    padding-left: var(--gutter);
+    padding-right: var(--gutter);
     text-align: center;
 }
-    // &:focus {
-    //     box-shadow: 0 0 0 1px var(--highlight);
-    //     outline: 0 none;
-    // }
+//  .tabs__tab:focus {
+//         box-shadow: 0 0 0 1px var(--highlight);
+//         outline: 0 none;
+//     }
 
 .js-tabs__link{
     padding-top: calc(var(--gutter)/2);
 }
 
 .js-tabs .is--active {
-    background-color: #F6f6f6;
-    border-top: 2px solid #FFDD00;
-    height: calc(var(--baseline)*2);
+    // border-top: 2px solid #FFDD00;
     font-weight: 600;
+    background-color: var(--brand-color-light-grey);
 }
 
 .js-tabs{
-    height: calc(var(--gutter)*2);
     background-color: white;
 }
 
 .tabs__tabpanel {
     padding-top: calc(var(--baseline));
+    background-color: var(--brand-color-light-grey);
+}
+
+.tabs__section rte{
+
 }
 
 .my-account__container{

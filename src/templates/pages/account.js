@@ -32,7 +32,6 @@ const Account = () => <DefaultLayout>
                         <a id="tab-2" class="tabs__tab js-tabs__link" href="#password" role="tab">Password</a>
                         <a id="tab-3" class="tabs__tab js-tabs__link" href="#emailnotifications" role="tab">Email - notifications</a>
                         <a id="tab-3" class="tabs__tab js-tabs__link" href="#gopaperless" role="tab">Go Paperless</a>
-                        
                     </div>
                 </div>
             </div>

@@ -3,8 +3,7 @@
 }
 
 .table__search-form{
-  // display: flex;
-  // justify-content: space-between;
+  padding-top: var(--baseline);
 }
 .table-data__container {
   text-align: right;
@@ -59,17 +58,15 @@
 }
 
 
+
 .table__header {
-  font-weight: bold;
   font-family: "roboto";
-  color: var(--brand-color);
   text-align: right;
   font-size: var(--font-size-minus-1);
-  padding: calc(var(--gutter)/2) calc(var(--gutter)/2);
+  padding-top: calc(var(--gutter)/2);
+  padding-bottom: calc(var(--gutter)/2);
   margin-bottom: calc(var(--baseline)/4);
 }
-
-
 
 .table__header:nth-child(1) {
   text-align: left;
@@ -88,8 +85,8 @@ tr.table__row td{
 }
 .table__cell {
   color: var(--brand-color);
-  font-family: "roboto";
-  padding: calc(var(--gutter)/2) calc(var(--gutter)/2);
+  padding-top: calc(var(--gutter)/2);
+  padding-bottom: calc(var(--gutter)/2);
   border-bottom: 8px solid rgba(0,0,0,0);
   text-align: right;
   
@@ -132,89 +129,4 @@ tr.table__row td{
   background-color: var(--brand-color);
   
 }
-
-.search__container-table{
-    display: flex;
-    // justify-content: space-between;
-    max-width: 80%;
-    height: calc(var(--baseline)*2);
-    
-
-}
-
-.search-table{
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  padding:0;
-  height: calc(var(--baseline)*2);
-  width: 50%;
-  border: 2px solid var(--brand-color);
-
-}
-
-
-.search__input-table{
-  width: 30%;
-  background-color: transparent;
-  display: block;
-  border-right: var(--gutter);
-  padding: calc(var(--baseline)/2) calc(var(--gutter)/2);
-}
-
-.search-filter{
-  display: flex;
-  flex-direction: column;
-  // width: 40%;
-  padding-right: var(--gutter);
-}
-
-
-
-.search__submit-btn--table{
-  display: flex;
-  background-color: transparent;
-  border: none;
-  position: absolute;
-  justify-content: center;
-  align-items: center;
-}
-
-.search__submit-icon{
-  display: block;
-}
-
-
-
-.search__input-filter{
-  // display: block;
-  padding: calc(var(--baseline)/2) calc(var(--gutter)/2);
-  background-color: transparent;
-  width: 100%;
-  flex-grow: 1;
-  // height: 38px;
-  
-
-}
-
-
-
-.search-filter-select{
-display: block;
-border: 2px solid var(--brand-color);
-height: calc(var(--baseline)*2);
-width: 240px;
-background-color: transparent;
-padding: calc(var(--baseline)/4) calc(var(--gutter)/2);
-
-}
-.search-filter-element{
-  padding-left: 24px;
-  
-}
-.search-filter-label{
-  font-family: "roboto";
-}
-
-
 
