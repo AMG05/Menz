@@ -1,0 +1,60 @@
+
+.page__container{
+    background-color: var(--brand-color-light-grey);
+    background-image: url("/static/img/adminimage.svg");
+    background-position: right;
+    background-repeat: no-repeat;
+}
+
+.admin-login__container{
+    padding-top: calc(var(--baseline)*2);
+    
+}
+
+.login-form__container{
+    padding-top: var(--baseline);
+    // background-image: url('../../../img/adminimage.svg');
+    // background-size: cover;
+    // background-position: center;
+    // background-repeat: no-repeat;
+}
+
+.admin-login-input__container{
+
+}
+
+.input--with-password{
+    border: 2px solid var(--brand-color);
+    font-size: var(--font-size-plus-2);
+}
+
+
+
+// .showpassword__input-wrapper{
+//     display: inline-block;
+//     flex-direction: row;
+//     width: 100%;
+   
+// }
+
+.showpassword__group{
+    display: flex;
+    
+}
+
+.show-password__toggle{
+    color: var(--brand-color);
+    font-family: "roboto";
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+    line-height: 1.25;
+    font-size: var(-baseline);
+    padding: 5px 15px;
+    min-width: 5em;
+    background: var(--white);
+    white-space: nowrap;
+    display: table-cell;
+    z-index: 0;
+    border: solid 2px var(--brand-color);
+    
+}

@@ -1,0 +1,25 @@
+.newsalert__container{
+    padding: var(--gutter);
+}
+
+
+
+.newsalert__inner{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--brand-color-dark-grey);
+    color: var(--brand-color);
+    font-family: "roboto";
+    padding: calc(var(--gutter)/2);
+    border-left: 4px solid greenyellow;
+
+}
+
+.button-delete-icon{
+    background-color: var(--brand-color-dark-grey);
+}
+
+.button-delete{
+        background-color: var(--brand-color-dark-grey);
+    
+}

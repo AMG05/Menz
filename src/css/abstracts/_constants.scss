@@ -3,19 +3,29 @@
     
     --font-size-plus-10: 9.5vw;
     --font-size-plus-9: 6.875rem;
-    --font-size-plus-8: 5.2rem;
-    --font-size-plus-7: 4.3rem;
-    --font-size-plus-6: 3.2rem;
-    --font-size-plus-5: 2.625em;
-    --font-size-plus-4: 2.25rem;
-    --font-size-plus-3: 1.75rem;
-    --font-size-plus-2: 1.5rem;
-    --font-size-plus-1: 1.2rem;
+    --font-size-plus-8: 3.75rem;
+    --font-size-plus-7: 3.375rem;
+    --font-size-plus-6: 3rem;
+    --font-size-plus-5: 2.25em;
+    --font-size-plus-4: 2rem;
+    --font-size-plus-3: 1.5rem;
+    --font-size-plus-2: 1.313rem;
+    --font-size-plus-1: 1.125rem;
     --font-size-baseline: 1rem;
     --font-size-minus-1: 0.875rem;
-    --font-size-minus-2: 0.75rem;
+    --font-size-minus-2: 0.8rem;
 
+
+
+    --baseline-xxxlg:5rem;
+    --baseline-xxlg:4rem;
+    --baseline-xlg:2.5rem;
+    --baseline-lg:2rem;
     --baseline: 1.5rem;
+    --baseline-sm:1rem;
+    --baseline-xs:0.75rem;
+    --baseline-xxs:0.5rem;
+    --baseline-xxxs:0.25rem;
     --gutter: 24px;
     --max-container-width: 1200px;
     
@@ -35,6 +45,8 @@
     --brand-color-yellow: #FFDD00;
     --brand-color-light-grey: #F6f6f6;
     --brand-color-dark-grey: #B9BAC8;
+    --modal-bg:#ABABAE;
+    
 
     --light-weight: 300;
     --regular-weight: 400;
@@ -48,6 +60,9 @@
     --bp-sm: 768px;
     --bp-md: 1024px;
     --bp-lg: 1200px;
+
+    
+
 }
 
 $columns: 12;

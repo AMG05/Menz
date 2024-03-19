@@ -1,5 +1,5 @@
 import { h } from 'preact';
-import Input from '@components/forms/input';
+import Input from '@templates/components/forms/textfieldinput';
 import FormSelect from '@components/forms/formselect';
 
 const TabularData = ({ caption, head, body }) => (

@@ -1,31 +1,48 @@
 .footer{
-    // position: block;
-}
-.footer__top {
-    padding-top: calc(var(--baseline)*2);
-    background-color: #042940;
-    color: #ffffff;
-    padding-bottom: calc(var(--baseline)*2);
-    border-bottom: 1px solid var(--brand-color-dark-grey);
-}
-.footer__bottom {
-    padding-top: calc(var(--baseline));
-    padding-bottom: calc(var(--baseline)*2);
-    background-color: #042940;
-    color: #ffffff;
+    background: var(--brand-color);
+    color: #fff;
+    padding: 2rem 0;
+    padding-bottom: 5rem;
 }
 
-.footer__nav-title{
-    font-size: var(--font-size-plus-2);
+.footer__sections{
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: stretch;
+}
+
+.footer__title{
+    font-size: var(--font-size-plus-1);
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    color: #fff;
+
+}
+.footer__title-alt{
+    font-size: var(--font-size-plus-1);
     font-weight: 600;
-    padding-bottom: calc(var(--baseline)/4);
-    color: #FFFFFF;
+    margin-bottom: 0.25;
+    color: #FFDA00;
 
 }
 
-.footer__nav-link {
-    font-family: "roboto";
+.footer-nav{
+margin-bottom: calc(var(--baseline)) ;
+}
+
+.footer-nav__item{
+    display: block;
+    margin-bottom: 4px;
+}
+
+.footer-nav__link{
+    font-size: var(--font-size-baseline);
+    line-height: 1.5;
+    color: #fff;
     text-decoration: none;
-    color: #FFFFFF;
-
+    font-family: "roboto";
 }
+
+

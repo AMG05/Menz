@@ -23,7 +23,7 @@
 @import 'components/tabs';
 @import 'components/header-toggles';
 @import 'components/banner';
-@import 'components/table';
+// @import 'components/table';
 @import 'components/modal';
 @import 'components/form';
 @import 'components/forms/checkbox.scss';
@@ -32,7 +32,25 @@
 @import 'components/forms/dropdowncheckbox';
 @import 'components/forms/input';
 @import 'components/forms/formselect';
-@import 'components/tabular';
+// @import 'components/tabular';
 @import 'components/datadetail';
 @import 'components/datagroup';
 @import 'components/searchandfilter';
+@import 'components/Alerts/alertvan';
+@import 'components/Alerts/newsalert';
+@import 'components/forms/showpasswordinput';
+@import 'components/Admin/adminlogin';
+@import 'components/cards';
+@import 'components/Admin/adminhero';
+@import 'components/thirdnavigation';
+@import 'components/SearchandSubmit';
+@import 'components/forms/increasedecreaseform';
+@import 'components/forms/InputTextField';
+@import 'components/container';
+// @import 'components/tables3';
+@import 'components/pagenav';
+@import 'components/detail';
+@import 'components/forms/filters';
+@import 'components/tables4';
+
+// @import 'components/secondtabs';

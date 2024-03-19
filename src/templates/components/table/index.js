@@ -1,7 +1,7 @@
-import { title } from '@templates/pages';
+import { title } from '@templates/pages/returns';
 import { h } from 'preact';
-import HomePage from '@templates/pages';
-import Input from '../forms/input';
+import HomePage from '@templates/pages/returns';
+import Input from '../forms/textfieldinput';
 
 const Table = ({ headings }) => <table class="table">
             <thead class="table__head">

@@ -1,6 +1,6 @@
 import { h } from 'preact';
 
-const ExclusiveToggles = () => 
+const ExclusiveToggles = () =>
 
 <div class="exclusive-toggles__container">
     <div class="exclusive-search__container ">
@@ -60,7 +60,7 @@ const ExclusiveToggles = () =>
         </div>
     </div>
 </nav>
-</div>
+</div>;
 
 
 export default ExclusiveToggles;

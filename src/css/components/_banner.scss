@@ -10,3 +10,74 @@
 .banner--light{
     background-color: var(--brand-color-light-grey);
 }
+
+.alert__wrapper{
+    background: #E9E8ED;
+    max-width:550px;
+    padding: var(--baseline) var(--baseline-xs);
+    padding-right: 1rem;
+    border-left: 7px solid #97b01C;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+@media screen and (max-width: 480px) {
+    .alert__wrapper .btn {
+        padding:0.5rem 1rem;
+        padding: var(--baseline-xxs) var(--baseline-sm)
+    }
+}
+
+.full-width{
+    max-width: unset;
+    width: 100%;
+}
+
+.alert__content{
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    max-width: 60ch;
+    color: var(--brand-color);
+}
+
+.alert__text{
+    flex-grow: 1;
+}
+
+.alert__heading {
+    font-weight: 700;
+    font-weight: var(--bold-weight);
+    font-size: 1.125rem;
+    font-size: var(--font-size-plus-1)
+}
+
+.alert__additional-info {
+    font-weight: 700;
+    font-weight: var(--bold-weight);
+    display: inline
+}
+
+.alert__action {
+    line-height: 20px
+}
+
+.alert--blue {
+    background: #141446;
+    background: var(--midnight-blue);
+    border-left: none;
+    padding: 2rem;
+    padding: var(--baseline-lg)
+}
+
+.alert--blue .alert__content {
+    color: #fff
+}
+
+.alert--blue .btn:hover {
+    border: 2px solid #fff
+}

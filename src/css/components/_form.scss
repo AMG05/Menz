@@ -1,3 +1,14 @@
+.form{
+    max-width: 500px;
+    margin-top: var(--baseline);
+    margin-bottom: var(--baseline);
+}
+
+.form__row{
+    margin-bottom: 2rem;
+}
+
+
 .form-legend{
     padding-bottom: var(--gutter);
 }
@@ -31,6 +42,13 @@ font-family: "roboto";
 .form-input{
     border: 2px solid var(--brand-color);
     font-size: var(--font-size-plus-2);
+}
+
+.label{
+    display: block;
+    font-weight: 700;
+    position: relative;
+    color: var(--brand-color);
 }
 
 

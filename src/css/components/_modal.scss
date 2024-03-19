@@ -40,21 +40,46 @@
 }
 
 .form-radio{
-    padding: var(--gutter);
-    display: flex;
-    flex-direction: column;
+   
 }
 
-.form-radios{
+.radio__container{
     padding: var(--gutter) var(--baseline);
+    display: flex;
+    flex-direction: column;
+    color: #222;
+    display: flex;
+   
 }
 
 .form-radios__item{
-   padding-bottom: var(--gutter); 
+   padding-bottom: var(--gutter);
+   display: flex;
+   align-items: center;
+   justify-content: left;
 }
 .form-radios__input{
-padding-right: 15px;
+    appearance: none;
+    background-color: #ffffff;
+    width: 36px;
+    height: 36px;
+    border: 1px solid var(--brand-color);
+    margin: 0;
+    border-radius: 50%;
+    transition: all 0.3s ease;
 }
+
+
+  .form-radios__input:checked {
+    background: var(--brand-color);
+    border-color: yellow;
+    
+  }
+  
+  .form-radios__input:checked::before {
+    transform: scale(1);
+  }
+
 
 .form-radios__label{
     font-family: "roboto";
@@ -63,20 +88,33 @@ padding-right: 15px;
 }
 
 
-input[type='radio']{
-    transform: scale(2);
-    margin-bottom: 15px;
-    padding: var(--gutter);
-}
+
+
+
 
 
 .modal-confirmation__btn-close-icon-label{
     font-family: "roboto";
+    font-size: var(--font-size-minus-1);
 }
 
 .modal__header-title{
 font-family: "roboto";
+font-weight: 600;
+font-size: var(--baseline);
 
+}
+
+.modal__header-title-small{
+    font-family: "roboto";
+    font-weight: 400;
+    font-size: var(--baseline);
+    
+}
+
+.modal-confirmation__subtitle{
+    padding: var(--baseline);
+    font-weight: 400;
 }
 
 
@@ -106,20 +144,7 @@ font-family: "roboto";
     z-index: 1;
 }
 
-.modal-confirmation::backdrop{
-    // position: fixed;
-    // left: 0;
-    // background-color: var(--brand-color-dark-grey);
-    // width: 50%;
-    // z-index: -1;
-    // height: 100%;
-    // position: fixed;
-    // top: 0px;
-    // right: 0px;
-    // bottom: 0px;
-    // left: 0px;
-    // background: rgba(0, 0, 0, 0.1);
-}
+
 
 .modal{
     position: fixed;
@@ -137,9 +162,7 @@ font-family: "roboto";
 .modal-confirmation__row {
     padding: var(--gutter) var(--baseline);
 }
-.modal-confirmation__form {
-    // flex-direction: column;
-}
+
 .modal-confirmation__cancel{
     display: inline-block;
     padding: calc(var(--baseline)/2) var(--gutter);
@@ -166,7 +189,6 @@ font-family: "roboto";
         }
 }
 .modal-confirmation__cancel {
-    margin-left: calc(var(--gutter)/2);
     &:hover,
     &:focus {
         transition: background-color 120ms ease;

@@ -1,0 +1,22 @@
+.alert__container{
+    padding-top: var(--gutter);
+    padding-bottom: var(--gutter);
+}
+
+
+.alert__inner{
+    display: flex;
+    justify-content: space-between;
+    background-color: var(--brand-color);
+    color: white;
+    font-family: "roboto";
+    padding: var(--gutter);
+}
+
+.alert-info{
+    padding-left: var(--baseline);
+}
+
+.alert-button{
+    padding-right: var(--baseline);
+}

@@ -1,21 +1,34 @@
-.title-page__container{
+.page-header{
     background-color: #ffffff;
+    padding-top: 2rem;
+    padding-bottom: 5rem;
+    color: var(--brand-color);
     
 }
 
 
-.title {
-    @include plus-3;
-    font-weight: 600;
-    color: var(--brand-color);
-    padding-bottom: calc(var(--baseline)/2);
-    
-    
+.page-header__heading {
+    font-size: var(--font-size-plus-4);
+    font-weight:bold;
+  
 }
 
-.title__body{
-    color: var(--brand-color);
+.page-header__body{
     font-family: "roboto";
-    font-size: var(--font-size-baseline);
-    font-weight: 200;
+    font-size: 1.313rem;
+    max-width: 68ch;
+}
+
+
+.page-header--alt{
+    margin-bottom: 1.5rem;
+    max-width: 80ch;
+}
+
+
+
+.page-header__subtitle{
+    font-weight: 600;
+    font-size: var(--font-size-plus-3);
+    color: #6E6E6E8B;
 }

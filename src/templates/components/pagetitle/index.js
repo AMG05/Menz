@@ -2,14 +2,12 @@ import { h } from 'preact';
 
 export const PageTitle = ({ title, children }) => {
 
-    return <div class="wrap title-page__container">
-        <div class="row">
-            <div class="col xs-12 lg-6 ">
-                    <h1 class="title">{title}</h1>
-                    <div class="title__body">{children}</div>
-            </div>
+    return <header class="page-header">
+        <div class="wrap">
+                    <h1 class="page-header__heading">{title}</h1>
+                    <p class="page-header__body">{children}</p>
         </div>
-    </div>;
+    </header>;
 };
 
 export default PageTitle;

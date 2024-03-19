@@ -1,0 +1,99 @@
+.incremental-btn {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: var(--baseline);
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    border: 2px solid var(--brand-color);
+    border-radius: 50%; 
+    background-color: #fff;
+    position: relative;
+    margin-right: 10px;
+  }
+
+  .incremental-btn::before,
+  .incremental-btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60%;
+    height: 2px;
+    background-color: var(--brand-color);
+    transform: translate(-50%, -50%);
+  }
+
+  .incremental-btn::after {
+    transform: translate(-50%, -50%) rotate(90deg);
+  }
+
+  .decrease-btn {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 16px;
+    text-align: center;
+    cursor: pointer;
+    user-select: none;
+    border: 2px solid var(--brand-color);
+    border-radius: 50%; 
+    background-color: #fff;
+    position: relative;
+  }
+
+  .decrease-btn::before,
+  .decrease-btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 60%;
+    height: 2px;
+    background-color: var(--brand-color);
+    transform: translate(-50%, -50%);
+  }
+
+  .form-input{
+        width: 30%;
+        // display: block;
+        padding: 0 calc(var(--gutter)/2);
+        background-color: #ffffff;
+        border: 1px solid var(--brand-color);
+        appearance: none;
+        -moz-appearance: textfield;
+        height: 40px;
+        line-height: 36px;
+        margin-top: calc(var(--baseline)/6);
+        margin-right: 10px; 
+        
+    
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+    
+        &:focus {
+            outline: 4px solid var(--highlight);
+        }
+    
+        &:disabled,
+        &[readonly] {
+            background-color: var(--light-grey-1);
+            pointer-events: none;
+            opacity: .7;
+        
+    
+}
+}
+
+.form-group-items{
+ 
+    padding-top: var(--baseline);
+    padding-bottom: var(--baseline);
+   
+}
+

@@ -12,13 +12,13 @@ const Header = ({ children, title }) => <header class="header header--home">
                     <div class="header__inner">
                         <Logo />
                         <SearchBar />
-                <ExclusiveToggles />
-              <Navigation
-                title={["Notifications", "Contact Us"]}/>
+                        <ExclusiveToggles />
+                        <Navigation
+                            title={["Notifications", "Contact Us"]}/>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
-</div>
 </header>;
 
 export default Header;

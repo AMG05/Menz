@@ -1,27 +1,23 @@
 import { h } from 'preact';
 
 
-export const SecondaryNavigation  = ({ links }) =>{
+export const SecondaryNavigation  = ({ pages }) =>
 
-    return <div class="sec-nav">
-    <div class="wrap">
-                <div class="row">
-                    <div class="col xs-12 lg-8">
-                        <nav class="secondary-navigation" aria-label="Secondary navigation">
-                            <ul class="secondary-navigation__list">
-                                {links.map(({ title, href }) => (
-                                        <li class="secondary-navigation__item">
-                                        <a href={href} class="secondary-navigation__link">{title}</a>
-                                    </li>
-                                ))}
+     <nav class="sec-nav" aria-label="Site navigation">
+                    <div class="wrap">
+                            <ul class="sec-nav__list">
+                                {pages.map((page) => {
+                                    return <li class="sec-nav__list-item hover-underline-animation">
+                                    <a href={page.link} class={"nav__link sec-nav__link" + ((page.active) ? " is--active" : "")}>
+                                    {page.title}
+                                    </a>
+                                </li>
+                                })}
                             </ul>
-                        </nav>
                     </div>
-                </div>
-            </div>
-            </div>;
+            </nav>;
     
 
-};
+
 
 export default SecondaryNavigation;

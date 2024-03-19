@@ -30,9 +30,8 @@ const SearchandFilter = () =>
                     </div>
                 </div>
                 <div class="search__btn">
-                    <PrimaryButton
-                        text="Submit"
-                        type="submit" />
+                    <button class="btn btn--primary" type="submit">Submit</button>
+
                 </div>
             </div>
         </form>

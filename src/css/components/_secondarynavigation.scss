@@ -12,31 +12,67 @@
   
 }
 
-.secondary-navigation__list {
+.sec-nav__list {
     display: flex;
+    align-items: center;
+    flex-direction: row;
     flex-wrap: wrap;
 }
 
-.secondary-navigation__item {
-    padding: calc(var(--baseline)/2);
-    color: var(--brand-color);
+.nav__link{
+    padding: 5px 0.75rem;
+    display: block;
+    border-bottom: 3px solid rgba(0,0,0,0);
+}
+
+.nav__link.is--active{
+    font-weight:700;
 
 }
 
-.secondary-navigation__link {
-    text-decoration: none;
-    color: var(--brand-color);
-    font-family: "roboto";
-    
-    
+.sec-nav__link{
+    padding: 1rem 1.5rem;
 }
 
-.secondary-navigation__link:hover {
-    text-decoration: underline;
-    color: var(--brand-color);
-    text-underline-offset: var(--baseline);
-    
-    
-    
-    
+.sec-nav__link.is--active{
+    border-bottom: 3px solid var(--brand-color);
 }
+
+
+
+
+
+
+
+
+
+// .sec-nav__link:hover {
+//     text-decoration: underline;
+//     color: var(--brand-color);
+//     text-underline-offset: var(--baseline);
+
+// }
+
+.hover-underline-animation{
+    display: inline-block;
+  position: relative;
+  color: var(--brand-color);
+}
+
+.hover-underline-animation::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--brand-color);
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+  }
+  
+  .hover-underline-animation:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+  }

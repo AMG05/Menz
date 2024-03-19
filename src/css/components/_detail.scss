@@ -1,0 +1,31 @@
+.detail{
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    gap: 0.25rem;
+}
+
+.detail__item{
+    font-size: var(--font-size-plus-2);
+    font-weight: 700;
+    align-items: flex-end;
+}
+
+.detail__list{
+    display: flex;
+    gap: 0.75rem;
+    gap: var(--baseline-xs);
+}
+
+.detail:not(:last-child){
+    padding-right: 0.5rem;
+}
+
+.detail:not(:first-child){
+    padding-left: 0.5rem;
+}
+
+.text-underline{
+    text-decoration: underline;
+}
+

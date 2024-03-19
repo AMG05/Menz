@@ -1,0 +1,15 @@
+.dropdown{
+    display: inline-block;
+    position:relative;
+}
+
+.dropdown__input{
+    display: block;
+    position:relative;
+    background: rgba(0,0,0,0)no-repeat;
+    color: var(--brand-color);
+    line-height: 1.2;
+    padding: 0.75rem 50px 0.75rem 0;
+    font-weight: 700;
+    font-size: var(--font-size-plus-2);
+}

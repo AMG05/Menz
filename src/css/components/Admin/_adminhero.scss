@@ -1,0 +1,87 @@
+.admin-hero__container{
+    background-color: white;
+    padding-top: var(--baseline);
+    padding-bottom: calc(var(--baseline)*2);
+}
+
+.tasks-title{
+    padding: var(--baseline) 0 var(--baseline) 0;
+    font-family: "roboto";
+    font-weight: 600;
+    border-top: 2px solid var(--brand-color-dark-grey);
+    border-bottom: 2px solid var(--brand-color-dark-grey);
+
+}
+
+.task__card{
+    position: relative;
+    border-bottom: 1px solid var(--brand-color-light-grey);
+}
+
+.task__link::after{
+    content: "";
+    height: 100%;
+    left:0px;
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    z-index: 0;
+    bottom: 0;
+    right: 0;
+}
+
+.task__link{
+    text-decoration: none;
+    font-family: "roboto";
+    color: var(--brand-color);
+
+}
+
+.task-item-title{
+    padding-top: var(--baseline);
+    font-weight: 600;
+    font-family: "roboto";
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0Ij48cGF0aCBkPSJNMjQgMjRIMFYwaDI0djI0eiIgZmlsbD0ibm9uZSIgb3BhY2l0eT0iLjg3Ii8+PHBhdGggZD0iTTE2LjU5IDguNTlMMTIgMTMuMTcgNy40MSA4LjU5IDYgMTBsNiA2IDYtNi0xLjQxLTEuNDF6Ii8+PC9zdmc+');
+    background-repeat: no-repeat, repeat;
+    background-position: right calc(var(--gutter)/4) top 100%, 0 0;
+
+}
+
+.task-item-description{
+    font-family: "roboto";
+    font-size: var(--font-size-minus-1);
+    padding-bottom: var(--baseline);
+}
+
+.tasks-titles{
+    display: flex;
+    justify-content: space-between;
+}
+
+.tasks__container{
+    // padding-top: var(--baseline);
+    // padding-bottom: var(--baseline);
+}
+
+.titles{
+    font-family: "roboto";
+    
+}
+
+.task-item-list{
+    border-top: 1px solid var(--brand-color-light-grey);
+    border-bottom: 1px solid var(--brand-color-light-grey);;
+}
+
+.task-item-list:nth-child(1){
+    border-top: none;
+    border-bottom: 1px solid var(--brand-color-light-grey);;
+}
+.task-item{
+    padding-top: calc(var(--baseline));
+    padding-bottom: calc(var(--baseline));
+    font-family: "roboto";
+    font-weight: 600;
+    font-size: var(--font-size-minus-1);
+    
+}

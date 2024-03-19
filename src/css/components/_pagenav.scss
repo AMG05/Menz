@@ -1,0 +1,30 @@
+.nav--page{
+    background-color: #fff;
+}
+
+.nav__list{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav__list--page{
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.nav__link--page{
+    padding: var(--baseline-xxs) var(--baseline);
+    border-top: 3px solid rgba(0, 0, 0, 0);
+    border-bottom: none;
+}
+
+.nav__link--page.is--active{
+    background: #F6F6F6;
+    border-bottom: none;
+    border-top: 3px solid #FFDA00;
+}
+
+
+

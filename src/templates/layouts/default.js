@@ -6,6 +6,7 @@ import Footer from '@components/footer';
 import PrimaryNavigation from '@templates/components/navigation';
 import SearchBar from '@templates/components/searchbar';
 
+
 const Default = ({ children }) => <Fragment>
     <Header class="header">
         <Skip />
