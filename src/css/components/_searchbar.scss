@@ -15,8 +15,8 @@
 
 .search__container {
     display: flex;
-    justify-content: flex-end;
-    height: calc(var(--baseline)*1.5);
+    gap: 1.5rem;
+    margin-top: 0.75rem;
 }
 
 
@@ -34,12 +34,24 @@
 
 }
 
-.search__input {
-    display: block;
-    padding: calc(var(--baseline)/2) calc(var(--gutter)/2);
-    background-color: transparent;
-    width: 100%;
+.search__input-container{
+    position: relative;
+    display: flex;
     flex-grow: 1;
+    max-width: 480px;
+}
+
+.search__input {
+    width: 100%;
+    display: block;
+    padding: 0 var(--baseline-sm);
+    background-color: #fff;
+    padding-right:calc(1.5rem *1.5);
+    border: 2px solid var(--brand-color);
+    height: 44px;
+    line-height: 36px;
+    color: #000;
+  
  
 }
 

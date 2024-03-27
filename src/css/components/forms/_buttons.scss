@@ -20,6 +20,14 @@
     padding-top: 0.5rem;
 }
 
+.btn__container--table{
+    gap: 1rem;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 0;
+    flex-wrap: nowrap;
+}
+
 .btn{
     font-family: "roboto";
     padding: 0.5rem 2.5rem;
@@ -39,12 +47,28 @@
     padding: 0.5rem 2rem;
 }
 
+.btn--outline{
+    border: 2px solid var(--brand-color);
+}
+
+.btn--small{
+    padding: 7px 20px;
+}
+
 .btn--input{
     border: 2px solid var(--brand-color);
     margin-left: -2px;
     padding: 0 1rem;
     min-width: 75px;
     color: #6E6E8B;
+}
+
+.btn svg{
+    fill: var(--brand-color);
+}
+
+.btn__icon--right{
+    margin-left: var(--baseline-xxs);
 }
 
 // .btn-white{

@@ -99,8 +99,11 @@ const DecreaseIncreaseButtons = ( {max}) => {
                                     onClick={() => decreaseNumber('TuesdayInput')} />
                             </div>
                     </div>
-                    <button type="submit" class="modal-confirmation__confirm">Continue</button>
-                    <button type="button" class="modal-confirmation__cancel js-modal-confirmation__btn">Cancel</button>
+                    <div class="modal-confirmation__row btn__container">
+                        <button type="submit" class="btn btn--primary modal-confirmation__confirm">Continue</button>
+                        <button type="button" class="btn btn--secondary modal-confirmation__cancel js-modal-confirmation__btn">Cancel</button>
+                    </div>
+                    
                 </div>
         </form>
          )}

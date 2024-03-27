@@ -64,6 +64,10 @@
     border-right: 1px solid var(--light-grey-3)
 }
 
+.justify-end{
+    justify-content: end;
+}
+
 @media screen and (max-width: 600px) {
     .page-content__header--right {
         justify-content:space-between;
