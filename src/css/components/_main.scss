@@ -13,11 +13,11 @@
 .container{
     background-color: var(--brand-color-light-grey);
     height: 100%;
-    padding-top:calc(var(--baseline)*3);
+    padding: 5rem 0;
     width:100%;
-    @media(min-width: map-get($mq-breakpoints,  md)) {
-        padding-top:var(--v-space);
-    }
+    // @media(min-width: map-get($mq-breakpoints,  md)) {
+    //     padding-top:var(--v-space);
+    // }
 }
 
 .push-bottom{
@@ -26,6 +26,10 @@
 
 .push-top--xs{
     margin-top: var(--baseline)/3;
+}
+
+.push-top--xlg{
+margin-top: 2.5rem;
 }
 
 .page-content {
@@ -101,4 +105,17 @@
 
 .page-content--no-bg {
     background: #fff
+}
+
+.bg__grey{
+    background: #F6F6F6;
+    height: 100%
+}
+
+.bg__network{
+    background-image: url(https://menzies-flat-fe.netlify.app/static/img/Network-graphic.svg);
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-size: 1300px;
+    height: 100%
 }

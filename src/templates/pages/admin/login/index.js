@@ -35,14 +35,13 @@ const Home = () =>
                         <div class="col xs-12 md-6">
                             <form class="form">
                                 <header class="page-header--alt">
-                                    <h1 class="page-header--alt visuallyhidden">Login</h1>
+                                    <h1 class="page-header__heading visuallyhidden">Sign in</h1>
                                     <p class="page-header__title">Welcome back</p>
                                     <p class="page-header__subtitle">Please enter your details</p>
                                 </header>
-                                <div class="form__row">
+                                <div class="form__row push-top--xlg">
                                     <div class="text-field">
                                         <label class="label">Customer Reference number</label>
-                                        <span></span>
                                         <div class="text-field__input-container">
                                             <input class="text-field__input"></input>
                                         </div>
@@ -51,7 +50,6 @@ const Home = () =>
                                 <div class="form__row">
                                     <div class="text-field">
                                         <label class="label">Password</label>
-                                        <span></span>
                                         <div class="text-field__input-container">
                                             <input class ="text-field__input" id="Current password" type="password" aria-required="true"></input>
                                             <button class="text-field__toggleBtn Btn btn--input" aria-controls="CurrentPassword" type="button">Show</button>

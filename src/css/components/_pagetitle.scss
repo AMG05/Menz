@@ -8,9 +8,15 @@
 
 
 .page-header__heading {
-    font-size: var(--font-size-plus-4);
-    font-weight:bold;
+    font-size: var(--font-size-plus-2);
+    font-weight:700;
   
+}
+
+.page-header__title{
+    font-weight: 700;
+    font-size: 2.25rem;
+    color: var(--brand-color);
 }
 
 .page-header__body{

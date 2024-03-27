@@ -6,9 +6,11 @@
 .dropdown__input{
     display: block;
     position:relative;
-    background: rgba(0,0,0,0)no-repeat;
+    background: rgba(0,0,0,0) no-repeat;
+    background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNC44MjgiIGhlaWdodD0iMTMuODI4IiB2aWV3Qm94PSIwIDAgMjQuODI4IDEzLjgyOCI+DQogIDxwYXRoIGlkPSJQYXRoXzk5OTgiIGRhdGEtbmFtZT0iUGF0aCA5OTk4IiBkPSJNNzQxLjExOCwzNS4wNzRsMTEsMTEsMTEtMTEiIHRyYW5zZm9ybT0idHJhbnNsYXRlKC03MzkuNzA0IC0zMy42NikiIGZpbGw9Im5vbmUiIHN0cm9rZT0iIzcwNzA3MCIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2Utd2lkdGg9IjIiLz4NCjwvc3ZnPg0K);
     color: var(--brand-color);
     line-height: 1.2;
+    background-position: calc(100% - var(--baseline)/4) center;
     padding: 0.75rem 50px 0.75rem 0;
     font-weight: 700;
     font-size: var(--font-size-plus-2);
